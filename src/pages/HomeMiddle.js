@@ -6,6 +6,10 @@ import image2 from "../assets/img/pics11.jpg";
 import { ChevronRightIcon } from "@heroicons/react/solid";
 import { ChevronUpIcon } from "@heroicons/react/outline";
 export default function HomeMiddle() {
+  const scrollToTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
   return (
     <div>
       <Coursel />
@@ -45,7 +49,7 @@ export default function HomeMiddle() {
           />
         </div>
       </div>
-      <div className="w-full flex flex-col items-center bg-green-600  justify-center h-70 gap-y-4 p-4">
+      <div className="w-full flex flex-col items-center bg-green-700  justify-center h-70 gap-y-4 p-4">
         <div className="cursor-pointer transition duration-700 ease-in-out  text-white flex  justify-between space-x-16">
           <div className="flex flex-col gap-y-2">
             <div className="underline underline-offset-6 px-2">
@@ -136,11 +140,13 @@ export default function HomeMiddle() {
         </div>
         <hr />
         <div className="flex flex-col items-center justify-center cursor-pointer gap-y-2">
-          <div>
+          <div onClick={scrollToTop}>
             <ChevronUpIcon className="w-6 h-6 text-yellow-400 animate-bounce" />
           </div>
           <div className="mb-4">
-            <h5 className="text-white text-xs">&copy;2022 | All rights reserved</h5>
+            <h5 className="text-white text-xs">
+              &copy;2022 | All rights reserved
+            </h5>
           </div>
         </div>
       </div>

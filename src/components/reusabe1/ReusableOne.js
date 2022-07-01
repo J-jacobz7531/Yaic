@@ -9,7 +9,7 @@ export default function ReusableOne() {
   const [fullText, setFullText] = React.useState(
     "i love coding all the time and am very good at its"
   );
-  console.log(fullText);
+  // console.log(fullText);
   const [index, setIndex] = React.useState(0);
   const tests = [
     {

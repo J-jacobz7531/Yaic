@@ -6,8 +6,8 @@ import image4 from "../../assets/img/pics8.jpg";
 import image5 from "../../assets/img/pics9.jpg";
 export default function Coursel() {
   return (
-    <div className="relative">
-      <div className="absolute w-full h-20 bottom-0 z-20" />
+    <div>
+      <div className="w-full h-20 bottom-0 z-20" />
       <Carousel
         autoPlay
         infiniteLoop

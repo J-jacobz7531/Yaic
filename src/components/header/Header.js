@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDownIcon, SearchIcon } from "@heroicons/react/solid";
 import TextScroller from "../textScroller/TextScroller";
@@ -33,9 +33,22 @@ const Header = () => {
   ];
 
   const [active, setActive] = useState(false);
+  const [small, setSmall] = useState(false);
+  console.log(small);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () =>
+        setSmall(window.pageYOffset > 100)
+      );
+    }
+  }, []);
 
   return (
-    <header className="w-full flex flex-col bg-white shadow-lg dark:bg-gray-800 h-24">
+    <header
+      className={`w-full flex flex-col fixed top-0 z-50 bg-white dark:bg-gray-800  hover:transition duration-700 ease-in-out  ${
+        small ? "h-14" : "h-24"
+      }`}
+    >
       <div className="flex justify-between items-center w-full sm:px-8 h-full">
         <Link to="/" className="cursor-pointer">
           <h4 className="text-lg font-bold">Yaic</h4>
@@ -62,8 +75,9 @@ const Header = () => {
         </div>
       </div>
       <div
-        id="hidden"
-        className="bg-green-600 text-white p-2 flex items-center justify-center"
+        className={`bg-green-600 text-white p-2 flex items-center justify-center ${
+          small && "hidden"
+        }`}
       >
         <div className="bg-yellow-300 w-[16%] px-2 rounded-tl-xl rounded-bl-xl">
           <h5 className="text-xs">Pre-qualification Exercise 2020-2025</h5>
