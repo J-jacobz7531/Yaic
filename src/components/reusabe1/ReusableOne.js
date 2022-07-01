@@ -100,7 +100,7 @@ export default function ReusableOne() {
         </div>
       </div>
       <div className="w-[70%] border-solid bg-white flex items-center">
-        <div className="bg-red-500 w-1/12 flex items-center justify-center p-2">
+        <div className="bg-red-500 w-2/12 flex items-center justify-center p-2">
           <h5 className="text-xs text-white font-bold">ABI NEWS</h5>
         </div>
         <div className="px-2">

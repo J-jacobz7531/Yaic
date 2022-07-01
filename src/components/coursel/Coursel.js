@@ -17,17 +17,26 @@ export default function Coursel() {
         interval={5000}
         dynamicHeight={false}
       >
-        <div>
+        <div className="flex items-center justify-center">
           <img className="h-[70vh]" src={`${image3}`} alt="" />
-          <p>Legend 1</p>
+          <div className="absolute text-white">
+            <h5 className="font-bold text-lg">Agribusiness in Action</h5>
+            <p className="text-sm ">Legend 1</p>
+          </div>
         </div>
-        <div>
+        <div className="flex items-center justify-center">
           <img className="h-[70vh]" src={`${image4}`} alt="" />
-          <p>Legend 2</p>
+          <div className="absolute text-white">
+            <h5 className="font-bold text-lg">Agribusiness in Action</h5>
+            <p className="text-sm ">Legend 1</p>
+          </div>
         </div>
-        <div>
+        <div className="flex items-center justify-center">
           <img className="h-[70vh] " src={`${image5}`} alt="" />
-          <p>Legend 1</p>
+          <div className="absolute text-white">
+            <h5 className="font-bold text-lg">Agribusiness in Action</h5>
+            <p className="text-sm ">Legend 1</p>
+          </div>
         </div>
       </Carousel>
     </div>

@@ -8,6 +8,7 @@ function App() {
       <div  >
         <Header />
         <HomeMiddle />
+        <div className="mb-8"/>
         <Footer />
       </div>
     </Router>

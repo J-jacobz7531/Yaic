@@ -3,79 +3,11 @@ import { Coursel, Reusable, ReusableOne } from "../components";
 import image from "../assets/img/pics12.jpg";
 import image1 from "../assets/img/pics13.jpg";
 import image2 from "../assets/img/pics11.jpg";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid";
+import { ChevronRightIcon } from "@heroicons/react/solid";
+import { ChevronUpIcon } from "@heroicons/react/outline";
 export default function HomeMiddle() {
   return (
-    <main>
-      {/* <div>
-        <div id="default-carousel" class="relative" data-carousel="static">
-          <div class="overflow-hidden relative h-56 rounded sm:h-64 xl:h-80 2xl:h-96">
-            <div
-              class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
-              data-carousel-item=""
-            >
-              <img
-                src={`${image3}`}
-                class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
-                alt="..."
-              />
-            </div>
-
-            <div
-              class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10"
-              data-carousel-item=""
-            >
-              <img
-                src={`${image4}`}
-                class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
-                alt="..."
-              />
-            </div>
-
-            <div
-              class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10"
-              data-carousel-item=""
-            >
-              <img
-                src={`${image5}`}
-                class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
-                alt="..."
-              />
-            </div>
-          </div>
-
-          <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
-            <button
-              type="button"
-              class="w-3 h-3 rounded-full bg-white dark:bg-gray-800"
-              aria-current="true"
-              aria-label="Slide 1"
-              data-carousel-slide-to="0"
-            ></button>
-            <button
-              type="button"
-              class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
-              aria-current="false"
-              aria-label="Slide 2"
-              data-carousel-slide-to="1"
-            ></button>
-            <button
-              type="button"
-              class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
-              aria-current="false"
-              aria-label="Slide 3"
-              data-carousel-slide-to="2"
-            ></button>
-          </div>
-
-          <div className="flex absolute left-0 z-30 justify-center items-center px-4  cursor-pointer group focus:outline-none bg-black opacity-20 rounded-3xl w-10 h-10 top-2/4">
-            <ChevronLeftIcon className="w-10 h-10 text-white" />
-          </div>
-          <div className="flex absolute  right-0 z-30 justify-center items-center px-4  cursor-pointer group focus:outline-none bg-black opacity-20 rounded-3xl w-10 h-10 top-2/4">
-            <ChevronRightIcon className="w-16 h-16 text-white" />
-          </div>
-        </div>
-      </div> */}
+    <div>
       <Coursel />
       <Reusable />
       <ReusableOne />
@@ -113,6 +45,105 @@ export default function HomeMiddle() {
           />
         </div>
       </div>
-    </main>
+      <div className="w-full flex flex-col items-center bg-green-600  justify-center h-70 gap-y-4 p-4">
+        <div className="cursor-pointer transition duration-700 ease-in-out  text-white flex  justify-between space-x-16">
+          <div className="flex flex-col gap-y-2">
+            <div className="underline underline-offset-6 px-2">
+              <h5>Abi Publications</h5>
+            </div>
+            <div className="flex flex-col gap-y-2 items-start">
+              <div className="flex items-center hover:translate-x-2 hover:transition duration-700 ease-in-out hover:text-yellow-400 hover:underline underline-offset-">
+                <ChevronRightIcon className="w-5 h-5 text-white" />
+                <h5 className="text-xs hover:decoration-yellow-400">
+                  Quarterly LKM Briefs
+                </h5>
+              </div>
+              <div className="flex items-center hover:translate-x-2 hover:transition duration-700 ease-in-out hover:text-yellow-400 hover:underline underline-offset-">
+                <ChevronRightIcon className="w-5 h-5 text-white" />
+                <h5 className="text-xs">Annual Reports</h5>
+              </div>
+              <div className="flex items-center hover:translate-x-2 hover:transition duration-700 ease-in-out hover:text-yellow-400 hover:underline underline-offset-">
+                <ChevronRightIcon className="w-5 h-5 text-white" />
+                <h5 className="text-xs">Research & Impact Studies</h5>
+              </div>
+              <div className="flex items-center hover:translate-x-2 hover:transition duration-700 ease-in-out hover:text-yellow-400 hover:underline underline-offset-">
+                <ChevronRightIcon className="w-5 h-5 text-white" />
+                <h5 className="text-xs">The DCED Standard</h5>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-y-2">
+            <div className="underline underline-offset-6 px-2">
+              <h5>Results Measurements</h5>
+            </div>
+            <div className="flex flex-col gap-y-2">
+              <div className="flex items-center hover:translate-x-2 hover:transition duration-700 ease-in-out hover:text-yellow-400 hover:underline underline-offset-">
+                <ChevronRightIcon className="w-5 h-5 text-white" />
+                <h5 className="text-xs">Result Measurement System</h5>
+              </div>
+              <div className="flex items-center hover:translate-x-2 hover:transition duration-700 ease-in-out hover:text-yellow-400 hover:underline underline-offset-">
+                <ChevronRightIcon className="w-5 h-5 text-white" />
+                <h5 className="text-xs">aBi Business Plan</h5>
+              </div>
+              <div className="flex items-center hover:translate-x-2 hover:transition duration-700 ease-in-out hover:text-yellow-400 hover:underline underline-offset-">
+                <ChevronRightIcon className="w-5 h-5 text-white" />
+                <h5 className="text-xs">The DCED Standard</h5>
+              </div>
+              <div className="flex items-center hover:translate-x-2 hover:transition duration-700 ease-in-out hover:text-yellow-400 hover:underline underline-offset-">
+                <ChevronRightIcon className="w-5 h-5 text-white" />
+                <h5 className="text-xs">DCED Audit Reports</h5>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-y-2">
+            <div className="underline underline-offset-6 border-red-300 px-2">
+              <h5 className="font-xs text-start ">Partner Publications</h5>
+            </div>
+            <div className="flex flex-col gap-y-2">
+              <div className="flex items-center hover:translate-x-2 hover:transition duration-700 ease-in-out hover:text-yellow-400 hover:underline underline-offset-">
+                <ChevronRightIcon className="w-5 h-5 text-white" />
+                <h5 className="text-xs">Partner Research & Impact Studies</h5>
+              </div>
+              <div className="flex items-center hover:translate-x-2 hover:transition duration-700 ease-in-out hover:text-yellow-400 hover:underline underline-offset-">
+                <ChevronRightIcon className="w-5 h-5 text-white" />
+                <h5 className="text-xs">Partner Website Links</h5>
+              </div>
+              <div className="flex items-center hover:translate-x-2 hover:transition duration-700 ease-in-out hover:text-yellow-400 hover:underline underline-offset-">
+                <ChevronRightIcon className="w-5 h-5 text-white" />
+                <h5 className="text-xs">Quarterly LKM Briefs</h5>
+              </div>
+              <div className="flex items-center hover:translate-x-2 hover:transition duration-700 ease-in-out hover:text-yellow-400 hover:underline underline-offset-4">
+                <ChevronRightIcon className="w-5 h-5 text-white" />
+                <h5 className="text-xs">Success Stories</h5>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-y-2">
+            <div className="underline underline-offset-6 border-red-300">
+              <h5>Contact Us</h5>
+            </div>
+            <div className="flex flex-col gap-y-2">
+              <h5 className="text-xs">Tel: +256(0)312054865</h5>
+              <h6 className="text-xs">Email:info@gmail.com</h6>
+              <h5 className="text-xs">UMOJA Houser,2nd Floor</h5>
+              <h5 className="text-xs">plot 20, Nakesero Road</h5>
+              <h5 className="text-xs">P.O Box 29851, Kampala, Uganda</h5>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div className="flex flex-col items-center justify-center cursor-pointer gap-y-2">
+          <div>
+            <ChevronUpIcon className="w-6 h-6 text-yellow-400 animate-bounce" />
+          </div>
+          <div className="mb-4">
+            <h5 className="text-white text-xs">&copy;2022 | All rights reserved</h5>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
