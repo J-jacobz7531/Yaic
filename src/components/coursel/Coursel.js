@@ -7,7 +7,7 @@ import image5 from "../../assets/img/pics9.jpg";
 export default function Coursel() {
   return (
     <div>
-      <div className="w-full h-20 bottom-0 z-20" />
+      {/* <div className="w-full h-20 bottom-0 z-20" /> */}
       <Carousel
         autoPlay
         infiniteLoop
@@ -18,21 +18,21 @@ export default function Coursel() {
         dynamicHeight={false}
       >
         <div className="flex items-center justify-center">
-          <img className="h-[70vh]" src={`${image3}`} alt="" />
+          <img className=" h-[30vh] sm:h-[70vh]" src={`${image3}`} alt="" />
           <div className="absolute text-white">
             <h5 className="font-bold text-lg">Agribusiness in Action</h5>
             <p className="text-sm ">Legend 1</p>
           </div>
         </div>
         <div className="flex items-center justify-center">
-          <img className="h-[70vh]" src={`${image4}`} alt="" />
+          <img className="h-[30vh] sm:h-[70vh]" src={`${image4}`} alt="" />
           <div className="absolute text-white">
             <h5 className="font-bold text-lg">Agribusiness in Action</h5>
             <p className="text-sm ">Legend 1</p>
           </div>
         </div>
         <div className="flex items-center justify-center">
-          <img className="h-[70vh] " src={`${image5}`} alt="" />
+          <img className="h-[30vh] sm:h-[70vh] " src={`${image5}`} alt="" />
           <div className="absolute text-white">
             <h5 className="font-bold text-lg">Agribusiness in Action</h5>
             <p className="text-sm ">Legend 1</p>

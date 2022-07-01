@@ -49,8 +49,8 @@ export default function HomeMiddle() {
           />
         </div>
       </div>
-      <div className="w-full flex flex-col items-center bg-green-700  justify-center h-70 gap-y-4 p-4">
-        <div className="cursor-pointer transition duration-700 ease-in-out  text-white flex  justify-between space-x-16">
+      <div className="w-full flex flex-col items-center bg-green-700  justify-center h-[80%] sm:h-70 gap-y-4 p-4">
+        <div className="cursor-pointer transition duration-700 ease-in-out  text-white  flex items-center  flex-col space-y-4 sm:flex-row  justify-between space-x-16">
           <div className="flex flex-col gap-y-2">
             <div className="underline underline-offset-6 px-2">
               <h5>Abi Publications</h5>
@@ -78,10 +78,10 @@ export default function HomeMiddle() {
           </div>
 
           <div className="flex flex-col gap-y-2">
-            <div className="underline underline-offset-6 px-2">
+            <div className="underline underline-offset-6 sm:px-2">
               <h5>Results Measurements</h5>
             </div>
-            <div className="flex flex-col gap-y-2">
+            <div className="flex flex-col gap-y-2 px[-10]">
               <div className="flex items-center hover:translate-x-2 hover:transition duration-700 ease-in-out hover:text-yellow-400 hover:underline underline-offset-">
                 <ChevronRightIcon className="w-5 h-5 text-white" />
                 <h5 className="text-xs">Result Measurement System</h5>
@@ -139,7 +139,7 @@ export default function HomeMiddle() {
           </div>
         </div>
         <hr />
-        <div className="flex flex-col items-center justify-center cursor-pointer gap-y-2">
+        <div className="hidden sm:flex flex-col items-center justify-center cursor-pointer gap-y-2">
           <div onClick={scrollToTop}>
             <ChevronUpIcon className="w-6 h-6 text-yellow-400 animate-bounce" />
           </div>

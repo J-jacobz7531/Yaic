@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDownIcon, SearchIcon } from "@heroicons/react/solid";
+import {
+  ChevronDownIcon,
+  SearchIcon,
+  MenuIcon,
+  XIcon,
+} from "@heroicons/react/solid";
 import TextScroller from "../textScroller/TextScroller";
 
 const Header = () => {
@@ -33,6 +38,7 @@ const Header = () => {
   ];
 
   const [active, setActive] = useState(false);
+  const [showInput, setShowInput] = useState(false);
   const [small, setSmall] = useState(false);
   console.log(small);
   useEffect(() => {
@@ -43,13 +49,17 @@ const Header = () => {
     }
   }, []);
 
+  const handleShowInput = () => {
+    setShowInput(!showInput);
+  };
+
   return (
     <header
       className={`w-full flex flex-col fixed top-0 z-50 bg-white dark:bg-gray-800  hover:transition duration-700 ease-in-out  ${
         small ? "h-14" : "h-24"
       }`}
     >
-      <div className="flex justify-between items-center w-full sm:px-8 h-full">
+      <div className={`flex justify-between items-center w-full sm:px-8 h-full px-4 ${showInput && "mb-4"}`}>
         <Link to="/" className="cursor-pointer">
           <h4 className="text-lg font-bold">Yaic</h4>
         </Link>
@@ -70,20 +80,41 @@ const Header = () => {
             ))}
           </div>
           <div>
-            <SearchIcon className="w-5 h-5 text-gray-500 font-thin" />
+            <div onClick={handleShowInput}>
+              <SearchIcon className="w-5 h-5 text-gray-500 font-thin" />
+            </div>
+            {showInput && (
+              <div className="hover:transition duration-700 z-20 px-4 text-white ease-in-out bg-orange-400 absolute left-0 p-4 w-full flex gap-2 items-center">
+                <SearchIcon className="w-5 h-5 text-white " />
+                <input
+                  type="text"
+                  placeholder="Enter your search"
+                  className=" block p-1 w-full text-base focus:ring-orange-400 text-white focus:outline-0 border border-orange-400 bg-orange-400 rounded-sm"
+                />
+                <XIcon
+                  className="w-5 h-5 text-white "
+                  onClick={() => setShowInput(false)}
+                />
+              </div>
+            )}
+          </div>
+          <div className="sm:hidden">
+            <MenuIcon className="w-5 h-5 text-gray-500 font-thin" />
           </div>
         </div>
       </div>
-      <div
-        className={`bg-green-600 text-white p-2 flex items-center justify-center ${
-          small && "hidden"
-        }`}
-      >
-        <div className="bg-yellow-300 w-[16%] px-2 rounded-tl-xl rounded-bl-xl">
-          <h5 className="text-xs">Pre-qualification Exercise 2020-2025</h5>
+      {!showInput && (
+        <div
+          className={`w-full bg-green-600 text-white p-2 flex items-center justify-center hover:transition duration-700 ease-in-out ${
+            small && "hidden"
+          }`}
+        >
+          <div className="bg-yellow-300 flex w-full sm:w-[16%] px-2 rounded-tl-xl rounded-bl-xl">
+            <h5 className="text-xs">Pre-qualification Exercise 2020-2025</h5>
+          </div>
+          <TextScroller text="Pre-qualification Exercise 2022-2025, not later than 29th June 2022 before 5pm EAT" />
         </div>
-        <TextScroller text="Pre-qualification Exercise 2022-2025, not later than 29th June 2022 before 5pm EAT" />
-      </div>
+      )}
     </header>
   );
 };

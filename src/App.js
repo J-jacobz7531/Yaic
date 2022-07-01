@@ -10,7 +10,7 @@ function App() {
         <Header />
         <div className="mb-4" />
         <HomeMiddle />
-        <div className="mb-8" />
+        <div className="mb-60 sm:mb-8" />
         <Footer />
       </div>
     </Router>
